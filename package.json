@@ -1,0 +1,19 @@
+{
+  "name": "bridgework",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "dev:web": "npm --workspace @bridgework/web run dev",
+    "dev:api": "npm --workspace @bridgework/api run dev",
+    "build:web": "npm --workspace @bridgework/web run build",
+    "build:api": "npm --workspace @bridgework/api run build",
+    "build": "npm run build:web && npm run build:api"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}
